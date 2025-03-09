@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Rick and Morty Viewer</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-    <link rel="icon" href="./favicon.png" type="image/png">
-    <title>Rick and Morty</title>
 </head>
-
 <body>
-    <h1 id="titulo">Rick and Morty</h1>
-    <ul id="characters"></ul>
-    <div id="characterView">
-        <span id="close">x</span>
-        <ul>
-            <li id="name"></li>
-            <li id="status"></li>
-            <li id="origin"></li>
-        </ul>
-        <script src="./script.js"></script>
-    </div>
-</body>
+    <header>
+        <h1>Rick and Morty</h1>
+    </header>
 
+    <main>
+        <input type="text" id="search" placeholder="Buscar personagem...">
+        
+        <div id="characters"></div>
+        
+        <div id="pagination">
+            <button id="prev">Anterior</button>
+            <button id="first">Primeira Página</button>
+            <button id="next">Próximo</button>
+        </div>
+        
+        <div id="characterView" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="characterName"></h2>
+                <img id="characterImage" src="/placeholder.svg" alt="">
+                <p id="characterStatus"></p>
+                <p id="characterSpecies"></p>
+                <p id="characterGender"></p>
+                <p id="characterOrigin"></p>
+                <p id="characterLocation"></p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer">
+        <p>Feito com <span class="heart">❤️</span> por <span class="author">Wendhel Valeriano</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
+
